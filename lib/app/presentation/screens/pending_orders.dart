@@ -1,23 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:mentorship_week_one_tasks/app/widgets/bottom_nav_bar.dart';
 
 class PendingOrdersScreen extends StatefulWidget {
-  const PendingOrdersScreen({Key? key}) : super(key: key);
+  const PendingOrdersScreen({super.key});
 
   @override
   State<PendingOrdersScreen> createState() => _PendingOrdersScreenState();
 }
 
 class _PendingOrdersScreenState extends State<PendingOrdersScreen> {
-  int _currentIndex = 0;
-
-  void _onBottomNavTap(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-    // Add navigation logic here
-  }
-
   final List<Map<String, String>> _pendingOrders = [
     {
       'name': 'Omar Hassan',

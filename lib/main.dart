@@ -24,20 +24,21 @@
 //   }
 // }
 
-
-
 import 'package:flutter/material.dart';
-import 'package:mentorship_week_one_tasks/app/screens/new_order.dart';
-import 'package:mentorship_week_one_tasks/app/screens/orders_screen.dart';
-import 'package:mentorship_week_one_tasks/app/screens/pending_orders.dart';
-import 'package:mentorship_week_one_tasks/app/screens/reports_screen.dart';
+import 'package:mentorship_week_one_tasks/app/presentation/screens/new_order.dart';
+import 'package:mentorship_week_one_tasks/app/presentation/screens/orders_screen.dart';
+import 'package:mentorship_week_one_tasks/app/presentation/screens/pending_orders.dart';
+import 'package:mentorship_week_one_tasks/app/presentation/screens/reports_screen.dart';
+import 'package:mentorship_week_one_tasks/app/domain/services/hive_service.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await HiveService.init();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +62,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  const MainScreen({super.key});
 
   @override
   State<MainScreen> createState() => _MainScreenState();
@@ -135,8 +136,6 @@ class _MainScreenState extends State<MainScreen> {
             ),
           ],
         ),
-      
-      
       ),
     );
   }
@@ -144,7 +143,7 @@ class _MainScreenState extends State<MainScreen> {
 
 // Placeholder screens for Dashboard and Settings
 class DashboardScreen extends StatelessWidget {
-  const DashboardScreen({Key? key}) : super(key: key);
+  const DashboardScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -197,7 +196,7 @@ class DashboardScreen extends StatelessWidget {
 }
 
 class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({Key? key}) : super(key: key);
+  const SettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
