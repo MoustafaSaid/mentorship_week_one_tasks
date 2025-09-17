@@ -2,6 +2,15 @@
 
 A comprehensive Flutter application designed to demonstrate Object-Oriented Programming (OOP) principles and SOLID design patterns through a real-world coffee shop order management system.
 
+
+
+
+https://github.com/user-attachments/assets/762d3798-8297-4625-8857-899dc9a048b6
+
+
+
+
+
 ## 🎯 Project Overview
 
 The Smart Ahwa Manager is a mobile application that helps coffee shop owners manage their daily operations, including:
